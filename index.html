@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Cadastro de Currículo</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50" >
+        <div class="logo"><img class="esq" src="BM.png"><img class="dir" src="man.png"></div>
+
+        <div class="wrapper wrapper--w790" id="bg">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Cadastro de Currículo</h2>
+                </div>
+
+                <div class="card-body">
+                    <form method="post" action="cadastrar.php">
+                        <div class="form-row m-b-55">
+                            <div class="name">Dados Pessoais</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="nome">
+                                            <label class="label--desc">Nome Completo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input" type="date" name="dt_nascimento">
+                                            <label class="label--desc">Data de Nascimento</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="company">
+                                     <label class="label--desc">Logradouro</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="RG">
+                                            <label class="label--desc">RG</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="number" name="CPF">
+                                            <label class="label--desc">CPF</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="form-row">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Selecione</option>
+                                            <option>Feliz</option>
+                                            <option>Casado</option>
+                                            <option>Enrolando</option>
+                                        </select>
+                                        <div class="select-dropdown label--desc">Estado Civil</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Contatos</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email">
+                                    <label class="label--desc">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="area_code">
+                                            <label class="label--desc">DDD</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="phone">
+                                            <label class="label--desc">Telefone</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row p-t-30">                            
+                              <div class="name">Tem filhos?</div>
+                                <div class="value">
+                                    <div class="row row-refine">
+                                        <div class="col-3">
+                                            <div class="p-t-15">
+                                                <label class="radio-container m-r-55">Sim
+                                                    <input type="radio" checked="checked" name="filhos">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="radio-container">Não
+                                                    <input type="radio" name="filhos">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>                                                           
+                                        <div class="col-3 form-row p-t-20">
+                                                <div class="name">Carteira de Habilitação?</div>
+                                                <div class="value"></div>               
+                                        </div>
+                                         <div class="col-3">
+                                            <div class="p-t-15">
+                                                <label class="radio-container m-r-55">A
+                                                    <input type="radio" checked="checked" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="radio-container">B
+                                                    <input type="radio" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label><br>
+                                                <label class="radio-container">A/B
+                                                    <input type="radio" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="p-t-15">
+                                                <label class="radio-container">C
+                                                    <input type="radio" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label><br>
+                                                <label class="radio-container">D
+                                                    <input type="radio" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label><br>
+                                                <label class="radio-container">Nenhuma
+                                                    <input type="radio" name="exist">
+                                                    <span class="checkmark"></span>
+                                                </label>
+
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>  
+                            </div> 
+                            <div class="form-row m-b-55">
+                            <div class="name">
+                                    Cursos
+                                    <br><br>
+                                    <i class="adicionar">adicionar +</i>                        
+                            </div>
+                            <div class="value cursos">
+                                <div class="row row-refine">
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="curso[]">
+                                            <label class="label--desc">Nome do curso</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="conclusao[]">
+                                            <label class="label--desc">Conclusão</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <br>
+                        <div class="form-row m-b-55">
+                            <div class="row row-refine">
+                                <button class="btn btn--radius-2 btn--red" type="submit">Cadastrar</button>                        
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script>
+        $(document).on('click','.adicionar', function(){
+            var campo = '<div class="row row-refine"><div class="col-9"><div class="input-group-desc"><input class="input--style-5" type="text" name="curso[]"><label class="label--desc">Nome do curso</label></div></div><div class="col-3 "><div class="input-group-desc"><input class="input--style-5" type="text" name="conclusao[]"><label class="label--desc">Conclusão <span class="removerCurso">(-)</span></label></div></div></div>'
+            $('.cursos').append(campo);
+        });
+
+        $(document).on('click','.removerCurso',function(){
+            $(this).parent().parent().parent().parent().remove();
+        });
+        
+    </script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+
+</body>
+</html>
